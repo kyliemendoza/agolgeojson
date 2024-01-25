@@ -1,29 +1,31 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>ArcGIS Maps SDK for JavaScript Tutorials: Display a map</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ArcGIS Developers Guide: Display a map (2D)</title>
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
 
-    <style>
-        html,
-        body,
-        #viewDiv {
-            padding: 0;
-            margin: 0;
-            height: 100%;
-            width: 100%;
-        }
-    </style>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.28/"></script>
 
-<link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
-<script src="https://js.arcgis.com/4.28/"></script>
+  <script>
+    require([
+     "esri/config",
+      "esri/Map",
+      "esri/views/MapView"
+    ], function (esriConfig,Map, MapView) {
 
-<script>
-    require(["esri/config", "esri/Map", "esri/views/MapView"], function(esriConfig, Map, MapView) {
-
-        esriConfig.apiKey = "AAPK4ea76ef7d3a24982975f468dbb82cac6HUBNb0cpuMgh01NzfCHfEnmO7kxgHsvC0wv4Ai6ePQLFXyAPshWSMHiAKN1J_GQ5";
-
+      esriConfig.apiKey = "<AAPK4ea76ef7d3a24982975f468dbb82cac6HUBNb0cpuMgh01NzfCHfEnmO7kxgHsvC0wv4Ai6ePQLFXyAPshWSMHiAKN1J_GQ5>";
         const map = new Map({
           basemap: "arcgis/topographic" // basemap styles service
         });
@@ -35,13 +37,11 @@
           container: "viewDiv" // Div element
         });
 
-    });
-  </script>
+      });
+    </script>
 
-</head>
-
-<body>
+  </head>
+  <body>
     <div id="viewDiv"></div>
-</body>
-
+  </body>
 </html>
