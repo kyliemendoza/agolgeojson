@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>ArcGIS Maps SDK for JavaScript Tutorials: Display a map</title>
+    <title>Mega Cities</title>
 
     <style>
       html,
@@ -40,7 +40,7 @@
         });
 
         const view = new MapView({
-          map: map,
+          container: "viewDiv",
           center: [0, 0], // Longitude, latitude
           zoom: 4, // Zoom level
           container: "viewDiv" // Div element
