@@ -19,7 +19,7 @@
     <script src="https://js.arcgis.com/4.28/"></script>
 
    <script>
-      require(["esri/config", "esri/Map", "esri/layer/GeoJSONLayer", "esri/views/MapView"], 
+      require(["esri/config", "esri/Map", "esri/layers/GeoJSONLayer", "esri/views/MapView"], 
       (esriConfig, 
       Map, 
       GeoJSONLayer, 
@@ -31,14 +31,14 @@
         // MeaCities.geojson is the file that will be displayed on the map. 
         // Here is the url in case it does not work: https://kyliemendoza.github.io/agolgeojson/MegaCities.geojson
         
-        const GeoJSONLayer = new GeoJSONLayer({
-          url: url,
+        const geojsonLayer = new GeoJSONLayer({
+          url: "MegaCities.geojson",
           copyright: "Kylie Mendoza"
         });
-           
+
         const map = new Map({
           basemap: "arcgis/topographic", // basemap styles service
-          layers: [GeoJSONLayer]
+          layers: [geojsonLayer]
         });
 
         const view = new MapView({
@@ -52,7 +52,9 @@
     </script>
 
   </head>
+
   <body>
     <div id="viewDiv"></div>
   </body>
+  
 </html>  
