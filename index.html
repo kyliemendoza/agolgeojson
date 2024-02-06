@@ -19,10 +19,11 @@
     <script src="https://js.arcgis.com/4.28/"></script>
 
    <script>
-      require(["esri/config", "esri/Map", "esri/views/MapView"], function(esriConfig, Map, MapView) {
+      require(["esri/config", "esri/Map", "esri/layer/GeoJSONLayer", "esri/views/MapView"], 
+      function(esriConfig, Map, GeoJSONLayer, MapView) {
 
 
-        esriConfig.apiKey = "AAPK9c89b2be3b2847e5855098989dee99b2ti5ZLtJOzNptY3_yhg1lc2nqbYUD8RuNm4u3-LVBPsb_GdnzndOpiPIEc8_lM4bG";
+        esriConfig.apiKey = "AAPK9c89b2be3b2847e5855098989dee99b2ti5ZLtJOzNptY3_yhg1lc2nqbYUD8RuNm4u3-LVBPsb_GdnzndOpiPIEc8_lM4bG"; // My API key
 
         const map = new Map({
           basemap: "arcgis/topographic" // basemap styles service
