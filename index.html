@@ -46,7 +46,7 @@
                   label: "Population Range",
                 },
                 {
-                  fieldName: "Pop_1985",
+                  fieldName: "Pop_1985", // Make sue the field names match EXACTLY like the field names in the GeoJSON file
                   label: "Population in 1985",
                 },
                 {
@@ -54,7 +54,7 @@
                   label: "Population in 1990",
                 },
                 {
-                  fieldName: "Pop_2000",
+                  fieldName: "Pop_2000", 
                   label: "Population in 2000",
                 },
                 {
@@ -76,18 +76,18 @@
         };
 
         const geojsonLayer = new GeoJSONLayer({
-          url: "MegaCities.geojson",
+          url: "MegaCities.geojson", // GeoJSON URL
           copyright: "Kylie Mendoza",
-          popupTemplate: template
+          popupTemplate: template // Popup template. This will display the data when the user clicks on a city.
         });
 
         const map = new Map({
           basemap: "arcgis/topographic", // basemap styles service
-          layers: [geojsonLayer]
+          layers: [geojsonLayer] // Add the GeoJSON layer to the map
         });
 
         const view = new MapView({
-          map: map,
+          map: map, // The map
           center: [0, 0], // Longitude, latitude
           zoom: 4, // Zoom level
           container: "viewDiv" // Div element
