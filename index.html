@@ -31,9 +31,54 @@
         // MeaCities.geojson is the file that will be displayed on the map. 
         // Here is the url in case it does not work: https://kyliemendoza.github.io/agolgeojson/MegaCities.geojson
         
+        const template = {
+          title: "Population (Millions) bewteen 1985 and 2015",
+          content: [
+            {
+              type: "fields",
+              fieldInfos: [
+                {
+                  fieldName: "city",
+                  label: "City",
+                },
+                {
+                  fieldName: "Pop_range",
+                  label: "Population Range",
+                },
+                {
+                  fieldName: "Pop_1985",
+                  label: "Population in 1985",
+                },
+                {
+                  fieldName: "Pop_1990",
+                  label: "Population in 1990",
+                },
+                {
+                  fieldName: "Pop_2000",
+                  label: "Population in 2000",
+                },
+                {
+                  fieldName: "Pop_2005",
+                  label: "Population in 2005",
+                },
+                {
+                  fieldName: "Pop_2010",
+                  label: "Population in 2010",
+                },
+                {
+                  fieldName: "Pop_2015",
+                  label: "Population in 2015",
+                },
+                // Add more fields as needed
+              ],
+            },
+          ],
+        };
+
         const geojsonLayer = new GeoJSONLayer({
           url: "MegaCities.geojson",
-          copyright: "Kylie Mendoza"
+          copyright: "Kylie Mendoza",
+          popupTemplate: template
         });
 
         const map = new Map({
